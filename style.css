@@ -75,3 +75,7 @@ button:hover {
     color: white;
     transition: all  0.25s;
 }
+
+.display::placeholder{
+    color: white;
+}
