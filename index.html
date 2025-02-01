@@ -15,29 +15,31 @@
 
 <body>
     <div class="calculator">
-        <input type="text" disabled class="display" placeholder="0">
+        <input type="text" disabled id="display" class="display" placeholder="0">
         <div class="buttons">
-            <button class="operator" style="grid-column: span 2; width:calc(2fr+10px);">C</button>
-            <button class="operator">DEL</button>
-            <button class="operator">/</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="operator">x</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="operator">-</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="operator">+</button>
-            <button style="grid-column: span 2; width:calc(2fr+10px);">0</button>
-            <button>,</button>
-            <button class="equal">=</button>
+            <button onclick="clearDisplay()" class="operator"
+                style="grid-column: span 2; width:calc(2fr+10px);">C</button>
+            <button onclick="deleteLast()" class="operator">DEL</button>
+            <button onclick="appendValue('/')" class="operator">/</button>
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue(9)">9</button>
+            <button onclick="appendValue('*')" class="operator">x</button>
+            <button onclick="appendValue(4)">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('-')" class="operator">-</button>
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('+')" class="operator">+</button>
+            <button onclick="appendValue('0')" style="grid-column: span 2; width:calc(2fr+10px);">0</button>
+            <button onclick="appendValue('.')">.</button>
+            <button onclick="calculateResult('=')" class="equal">=</button>
 
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
